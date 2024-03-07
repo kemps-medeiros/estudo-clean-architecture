@@ -2,7 +2,7 @@
 
 ## Aulas
 
-- [ ] Aula 1 - Clean Code and Refactorin
+- [X] Aula 1 - Clean Code and Refactorin
 
 
 ## Desafios Práticos

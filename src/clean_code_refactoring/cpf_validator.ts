@@ -10,9 +10,7 @@ export function validateCpf(cpf: string) {
 
     const cpfString = getStringOnly(cpf); 
 
-    const isDigitsAreTheSame = isAllDigitsAreTheSame(cpfString);
-
-    if(isDigitsAreTheSame) return false;
+    if(isAllDigitsAreTheSame(cpfString)) return false;
     
     try{  
         let     d1, d2;  

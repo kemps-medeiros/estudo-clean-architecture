@@ -17,26 +17,35 @@ describe('CPF', () => {
         expect(isValid).toBe(false);
     })
 
-    it('Should return false if cpf has less than 11 caracters', () => {
-        const cpf = '1234567891';
+    it('Should return false if cpf has less or more than 11 caracters', () => {
+        const cpfLessElevenCharacters = '1234567891';
+        const cpfMoreElevenCharacters = '123456789111111';
 
-        const isValid = validateCpf(cpf as any);
+        const isValidLess11Characters = validateCpf(cpfLessElevenCharacters as any);
+        const isValidMore11Characters = validateCpf(cpfMoreElevenCharacters as any);
 
-        expect(isValid).toBe(false);
-    })
-
-    it('Should return false if cpf has more than 14 caracters', () => {
-        const cpf = '123456789112345';
-
-        console.log(cpf.length);
-
-        const isValid = validateCpf(cpf as any);
-
-        expect(isValid).toBe(false);
+        expect(isValidLess11Characters).toBe(false);
+        expect(isValidMore11Characters).toBe(false);
     })
 
     it('Should return false if all characters are the same', () => {
         const cpf = '11111111111';
+
+        const isValid = validateCpf(cpf);
+
+        expect(isValid).toBe(false);
+    })
+
+    it('Should validate a valid cpf', () => {
+        const cpf = '386.118.690-01';
+
+        const isValid = validateCpf(cpf);
+
+        expect(isValid).toBe(true);
+    })
+
+    it('Should return false if a cpf is not valid', () => {
+        const cpf = '386.118.690-21';
 
         const isValid = validateCpf(cpf);
 

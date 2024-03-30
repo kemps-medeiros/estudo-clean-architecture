@@ -5,7 +5,8 @@
   "main": "index.js",
   "module": "exports",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",

@@ -9,6 +9,10 @@
 
 ### Aula 1
 
-- [ ] Desafio Prático: Refatorar função que valida CPF
+- [x] Desafio Prático: Refatorar função que valida CPF
+
+- [X] TDD
+
+- [ ] Clean Arch
 
 

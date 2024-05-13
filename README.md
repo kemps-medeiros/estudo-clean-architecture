@@ -2,17 +2,12 @@
 
 ## Aulas
 
-- [X] Aula 1 - Clean Code and Refactorin
-
-
-## Desafios Práticos
-
-### Aula 1
-
-- [x] Desafio Prático: Refatorar função que valida CPF
-
+- [X] Clean Code and Refactorin
+- [X] Desafio Prático: Refatorar função que valida CPF
 - [X] TDD
+- [X] Clean Arch
 
-- [ ] Clean Arch
+
+
 
 

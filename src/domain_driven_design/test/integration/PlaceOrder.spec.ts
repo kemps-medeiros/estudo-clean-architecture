@@ -4,7 +4,7 @@ import OrderRepositoryInMemory from "../../infra/repository/OrderRepositoryInMem
 import PlaceOrder from "../../application/usecase/place-order/PlaceOrder"
 
 describe("PlaceOrder", () => {
-    it('Should create an order', () => {
+    it('Should create an order', async () => {
         const itemRepository = new ItemRepositoryInMemory();
         const orderRepository = new OrderRepositoryInMemory();
         const couponRepository = new CouponRepositoryInMemory();
@@ -22,12 +22,12 @@ describe("PlaceOrder", () => {
             issueDate: new Date("2021-05-05T10:00:00")
         }
 
-        const output = placeOrder.execute(placeOrderInput);
+        const output = await placeOrder.execute(placeOrderInput);
 
         expect(output.total).toBe(5312);
     });
 
-    it('Should create an order and create an code', () => {
+    it('Should create an order and create an code', async () => {
         const itemRepository = new ItemRepositoryInMemory();
         const orderRepository = new OrderRepositoryInMemory();
         const couponRepository = new CouponRepositoryInMemory();
@@ -45,7 +45,7 @@ describe("PlaceOrder", () => {
             issueDate: new Date("2021-03-01T10:00:00")
         }
 
-        const output = placeOrder.execute(placeOrderInput);
+        const output = await placeOrder.execute(placeOrderInput);
 
         expect(output.code).toBe("202100000001");
     })

@@ -41,11 +41,11 @@ export default class ItemRepositoryInMemory implements ItemRepository {
     this.items = [new Item(payloadIten1), new Item(payloadIten2), new Item(payloadIten3)];
   }
 
-  getAll(): Item[] {
+  async getAll(): Promise<Item[]> {
     throw new Error("Method not implemented.");
   }
 
-  getById(idItem: number): Item | undefined {
+  async getById(idItem: number): Promise<Item | undefined> {
     return this.items.find((item) => item.idItem === idItem);
   }
 }

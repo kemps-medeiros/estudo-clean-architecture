@@ -17,5 +17,8 @@
     "jest": "^29.7.0",
     "ts-jest": "^29.1.2",
     "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "pg-promise": "^11.6.0"
   }
 }

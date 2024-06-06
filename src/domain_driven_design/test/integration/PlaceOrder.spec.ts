@@ -2,14 +2,14 @@ import CouponRepositoryInMemory from "../../infra/repository/CouponRepositoryInM
 import ItemRepositoryInMemory from "../../infra/repository/ItemRepositoryInMemory";
 import OrderRepositoryInMemory from "../../infra/repository/OrderRepositoryInMemory";
 import PlaceOrder from "../../application/usecase/place-order/PlaceOrder"
+import MemoryRepositoryFactory from "../../infra/factory/MemoryRepositoryFactory";
 
 describe("PlaceOrder", () => {
     it('Should create an order', async () => {
-        const itemRepository = new ItemRepositoryInMemory();
-        const orderRepository = new OrderRepositoryInMemory();
-        const couponRepository = new CouponRepositoryInMemory();
 
-        const placeOrder = new PlaceOrder(itemRepository, orderRepository, couponRepository);
+        const repositoryFactory = new MemoryRepositoryFactory();
+
+        const placeOrder = new PlaceOrder(repositoryFactory);
 
         const placeOrderInput = {
             cpf: "501.961.700-87",
@@ -28,11 +28,10 @@ describe("PlaceOrder", () => {
     });
 
     it('Should create an order and create an code', async () => {
-        const itemRepository = new ItemRepositoryInMemory();
-        const orderRepository = new OrderRepositoryInMemory();
-        const couponRepository = new CouponRepositoryInMemory();
 
-        const placeOrder = new PlaceOrder(itemRepository, orderRepository, couponRepository);
+        const repositoryFactory = new MemoryRepositoryFactory();
+
+        const placeOrder = new PlaceOrder(repositoryFactory);
 
         const placeOrderInput = {
             cpf: "501.961.700-87",

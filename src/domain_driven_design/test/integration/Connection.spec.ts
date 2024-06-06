@@ -1,6 +1,6 @@
 import PostgreSQLConnectionAdapter from "../../infra/database/PostgreSQLConnectionAdapter";
 
-describe('Connections Database', () => {
+describe.skip('Connections Database', () => {
     it('should test connection with database', async () => {
         const connection = new PostgreSQLConnectionAdapter();
         

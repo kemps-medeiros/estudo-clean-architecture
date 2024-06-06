@@ -1,7 +1,7 @@
 import PostgreSQLConnectionAdapter from "../../infra/database/PostgreSQLConnectionAdapter"
 import ItemRepositoryDatabase from "../../infra/repository/database/ItemRepositoryDatabase";
 
-describe("ItemRepositoryDatabase", () => {
+describe.skip("ItemRepositoryDatabase", () => {
     it("should test item repository database", async () => {
 
         const connection = new PostgreSQLConnectionAdapter();

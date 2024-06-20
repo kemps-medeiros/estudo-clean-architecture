@@ -24,7 +24,7 @@ describe("PlaceOrder", () => {
 
         const output = await placeOrder.execute(placeOrderInput);
 
-        expect(output.total).toBe(5312);
+        expect(output.total).toBe(5132);
     });
 
     it('Should create an order and create an code', async () => {

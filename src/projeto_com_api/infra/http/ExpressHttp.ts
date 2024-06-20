@@ -3,6 +3,7 @@ import Http from './Http';
 
 export default class ExpressHttp implements Http {
 	app: any;
+	server: any;
 
 	constructor () {
 		this.app = express();
@@ -16,6 +17,10 @@ export default class ExpressHttp implements Http {
 	}
 
 	async listen(port: number): Promise<void> {
-		await this.app.listen(port);
+		this.server = await this.app.listen(port);
+	}
+
+	async close(): Promise<void> {
+		await this.server.close();
 	}
 }

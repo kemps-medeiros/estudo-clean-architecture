@@ -6,7 +6,9 @@
 - [X] Desafio Prático: Refatorar função que valida CPF
 - [X] TDD
 - [X] Clean Arch
-- [ ] Domain Driven Design
+- [X] Domain Driven Design
+- [X] Events
+- [X] Design Patters
 
 
 

@@ -1,5 +1,4 @@
-# Domain Driven Design
+# Projeto com API
 
-
-## Próximo Desafio
+Nesse repositório foi implementado uma API ao nosso projeto.
 
